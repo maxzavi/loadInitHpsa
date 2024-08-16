@@ -29,11 +29,11 @@ const main = async()=>{
 
     console.log('Son: ' + items.length)
     //Initial value
-    let index=1000060
+    let index=process.env.SEQ_INIT
 
     await Promise.all(items.map(async ({item, sku}) => {
         index++;
-        item.ItemNumber="HPSA_B_" + index;
+        item.ItemNumber= process.env.ITEM_PREFIX+ index;
         const contents = await savePim(item)
         if (contents.status==200){
             const message = "OK:" + item.ItemNumber + " sku: " + sku + "->" +  JSON.stringify(contents)+ "\n"
