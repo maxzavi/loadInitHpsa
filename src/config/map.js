@@ -7,7 +7,7 @@ const map =[
     ["descripcionVineta","HpsaAprobacionFinal","DESCRIPCION_VINETA","","",""],
     ["descripcionWebAutomatica","HpsaAprobacionFinal","DESCRIPCION_WEB_AUTOMATICA","","",""],
     ["enriquecerParaSitioWeb","HpsaAprobacionFinal","Enriquecer para Sitio Web","","",""],
-    //["marca","HpsaAprobacionFinal","Marca","","",""],
+    ["marca","HpsaAprobacionFinal","Marca","","",""],
     ["nombreGlovo","HpsaAprobacionFinal","NOMBRE_GLOVO","","",""],
     ["realizadoComercial","HpsaAtributosAsistente","REALIZADO_COMERCIAL","","",""],
     ["advertenciaDeUso","HpsaAtributosComerciales","Advertencia de uso","","",""],
@@ -66,7 +66,7 @@ const map =[
     ["nivelSocioeconOmico","HpsaAtributosComerciales2","NIVEL SOCIOECONÓMICO","","",""],
     ["nuevoTipoDeSurtido","HpsaAtributosComerciales2","Nuevo Tipo de surtido","","",""],
     ["paisDeOrigen","HpsaAtributosComerciales2","País de origen","","",""],
-    //["proveedor","HpsaAtributosComerciales2","Proveedor","","",""],
+    ["proveedor","HpsaAtributosComerciales2","Proveedor","","",""],
     ["puntoDePrecio","HpsaAtributosComerciales2","Punto de precio","","",""],
     ["sobreInventario","HpsaAtributosComerciales2","Sobre_Inventario","","",""],
     ["subTipoDeProducto","HpsaAtributosComerciales2","Sub Tipo de Producto","","",""],
@@ -946,7 +946,7 @@ const map =[
     ["paisDeProcedencia","HpsaAtributosLogisticos","País De Procedencia","","",""],
     ["perecible","HpsaAtributosLogisticos","Perecible","","",""],
     ["pesoDeLaUnidadLogistica","HpsaAtributosLogisticos","Peso De La Unidad Logística","","","1"],
-    //["pesoDelMasterpackLogistica","HpsaAtributosLogisticos","Peso Del Masterpack (Logística)","","","1"],
+    ["pesoDelMasterpackLogistica","HpsaAtributosLogisticos","Peso Del Masterpack (Logística)","","","1"],
     ["pesoDelProducto","HpsaAtributosLogisticos","Peso Del Producto","","","1"],
     ["productoPeligroso","HpsaAtributosLogisticos","Producto peligroso","","",""],
     ["productosSensibles","HpsaAtributosLogisticos","Productos Sensibles","","",""],
@@ -956,10 +956,10 @@ const map =[
     ["tipoCodigoEan","HpsaAtributosLogisticos","Tipo Código Ean","","",""],
     ["tipoDelMasterpackLogistica","HpsaAtributosLogisticos","Tipo Del Masterpack (Logística)","","",""],
     ["unidadDeMedidaDeInventarioUmi","HpsaAtributosLogisticos","Unidad de Medida de Inventario (UMI)","","",""],
-    //["volumenDeLaUnidadLogistica","HpsaAtributosLogisticos","Volumen De  La Unidad Logística","","","1"],
-   // ["volumenDelMasterpackLogistica","HpsaAtributosLogisticos","VOLUMEN_DEL_MASTERPACK_LOGISTI","","","1"],
-    //["volumenDelProducto","HpsaAtributosLogisticos","VOLUMEN_DEL_PRODUCTO","","","1"],
-    //["volumenUlText","HpsaAtributosLogisticos","VOLUMEN_UL_TEXT","","","1"],
+    ["volumenDeLaUnidadLogistica","HpsaAtributosLogisticos","VOLUMEN_DE__LA_UNIDAD_LOGISTIC","","","1"],
+    ["volumenDelMasterpackLogistica","HpsaAtributosLogisticos","VOLUMEN_DEL_MASTERPACK_LOGISTI","","","1"],
+    ["volumenDelProducto","HpsaAtributosLogisticos","VOLUMEN_DEL_PRODUCTO","","","1"],
+    ["volumenUlText","HpsaAtributosLogisticos","VOLUMEN_UL_TEXT","","","1"],
     ["aprobadoPrecios","HpsaAtributosPrecios","APROBADO_PRECIOS","","",""],
     ["altoC1","HpsaAtributosSpacePlaning","Alto-C1","","","1"],
     ["altoC2","HpsaAtributosSpacePlaning","Alto-C2","","","1"],
@@ -1026,9 +1026,7 @@ const map =[
     ["esVisible","HpsaVtexWebservices","ES_VISIBLE","","",""],
     ["modalidad","HpsaVtexWebservices","MODALIDAD","","",""],
     ["pesoCubico","HpsaVtexWebservices","PESO_CUBICO","","",""],
-    ["precioDeLista","HpsaVtexWebservices","PRECIO_DE_LISTA","","",""],
-    
-    
+    ["precioDeLista","HpsaVtexWebservices","PRECIO_DE_LISTA","","",""],    
 ]
 
 module.exports={map}

@@ -7,9 +7,9 @@ const convert = (row, tags)=>{
     item.ItemDescription=getValueByTag(row,tags,"<Name>")
     item.ItemCategory[0].ItemCatalog="HPSA"
     item.ItemCategory[0].CategoryCode="HPSA_LIN_"+getValueByTag(row,tags,"Línea Promart").substring(0,5)
+    sku =getValueByTag(row,tags,"Sku")
     
     map.forEach(mapRow=>{
-        //console.log(t[2])
         let valueAttrib= getValueByTag(row,tags,mapRow[2])
         if (valueAttrib){
             let vattribName = mapRow[0]
@@ -19,18 +19,14 @@ const convert = (row, tags)=>{
             
             if (mapRow[3]){
                 if (mapRow[3]!=""){
-                    //console.log(mapRow[3], valueAttrib,mapRow[4])
                     valueAttrib = valueAttrib.split(mapRow[3])[mapRow[4]]
-                }
-    
+                }    
             }
             //UOM
             if (mapRow[5]){
                 if (mapRow[5]="1"){
-                    console.log(valueAttrib, mapRow[2])
                     valueAttribUOM=valueAttrib.split(" ")[1] 
-                    vattribNameUOM=vattribName+ "UEUOM"
-    
+                    vattribNameUOM=vattribName+ "UEUOM"    
                     valueAttrib=valueAttrib.split(" ")[0] 
                     vattribName="u"+vattribName+ "UE"
                 }
@@ -44,7 +40,10 @@ const convert = (row, tags)=>{
         }
     })
 
-    return item
+    //add    ["pesoDelMasterpackLogistica","HpsaAtributosLogisticos","Peso Del Masterpack (Logística)","","","1"],
+    addValue("HpsaAtributosLogisticos","pesoDelMasterpackLogisticaUEUOM", "kg", item)
+
+    return {item:item, sku:sku}
 }
 
 const getValueByTag = (row, tags, tag)=>{

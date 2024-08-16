@@ -21,24 +21,31 @@ const main = async()=>{
     .then((csvRow)=>{
         const items =[] 
         for (let index = 0; index < csvRow.length; index++) {
-            const item =  convert(csvRow[index],tags)
-            items.push(item)
+            const {item,sku} =  convert(csvRow[index],tags)
+            items.push({item:item, sku:sku})
          }
          return items
     })
 
     console.log('Son: ' + items.length)
-    let index=1000003
+    //Initial value
+    let index=1000060
 
-    //console.log(checkFloat("1 Año"))
-
-    await Promise.all(items.map(async (item) => {
+    await Promise.all(items.map(async ({item, sku}) => {
         index++;
         item.ItemNumber="HPSA_B_" + index;
         const contents = await savePim(item)
-        console.log(item.ItemNumber,  contents)
-      }));
-}
+        if (contents.status==200){
+            const message = "OK:" + item.ItemNumber + " sku: " + sku + "->" +  JSON.stringify(contents)+ "\n"
+            console.log(message)
+            fs.appendFile('LogOk.txt', message, err=>{})
 
+        }else{
+            const message = "Errr: "+ item.ItemNumber + " sku: " + sku + "->" + JSON.stringify(contents) + "\n"
+            console.log(message)
+            fs.appendFile('LogErr.txt', message, err=>{})
+        }
+      }))
+}
 
 main()
