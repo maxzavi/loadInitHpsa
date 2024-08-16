@@ -11,34 +11,36 @@ const convert = (row, tags)=>{
     map.forEach(mapRow=>{
         //console.log(t[2])
         let valueAttrib= getValueByTag(row,tags,mapRow[2])
-        let vattribName = mapRow[0]
-
-        let valueAttribUOM= null
-        let vattribNameUOM= null
-        
-        if (mapRow[3]){
-            if (mapRow[3]!=""){
-                //console.log(mapRow[3], valueAttrib,mapRow[4])
-                valueAttrib = valueAttrib.split(mapRow[3])[mapRow[4]]
-            }
-
-        }
-        //UOM
-        if (mapRow[5]){
-            if (mapRow[5]="1"){
-                console.log(valueAttrib, mapRow[2])
-                valueAttribUOM=valueAttrib.split(" ")[1] 
-                vattribNameUOM=vattribName+ "UEUOM"
-
-                valueAttrib=valueAttrib.split(" ")[0] 
-                vattribName="u"+vattribName+ "UE"
-            }
-        }
         if (valueAttrib){
-            addValue(mapRow[1],vattribName, valueAttrib, item)
-        }
-        if (valueAttribUOM){
-            addValue(mapRow[1],vattribNameUOM, valueAttribUOM, item)
+            let vattribName = mapRow[0]
+
+            let valueAttribUOM= null
+            let vattribNameUOM= null
+            
+            if (mapRow[3]){
+                if (mapRow[3]!=""){
+                    //console.log(mapRow[3], valueAttrib,mapRow[4])
+                    valueAttrib = valueAttrib.split(mapRow[3])[mapRow[4]]
+                }
+    
+            }
+            //UOM
+            if (mapRow[5]){
+                if (mapRow[5]="1"){
+                    console.log(valueAttrib, mapRow[2])
+                    valueAttribUOM=valueAttrib.split(" ")[1] 
+                    vattribNameUOM=vattribName+ "UEUOM"
+    
+                    valueAttrib=valueAttrib.split(" ")[0] 
+                    vattribName="u"+vattribName+ "UE"
+                }
+            }
+            if (valueAttrib){
+                addValue(mapRow[1],vattribName, valueAttrib, item)
+            }
+            if (valueAttribUOM){
+                addValue(mapRow[1],vattribNameUOM, valueAttribUOM, item)
+            }    
         }
     })
 
