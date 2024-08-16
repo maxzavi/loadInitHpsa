@@ -28,7 +28,9 @@ const main = async()=>{
     })
 
     console.log('Son: ' + items.length)
-    let index=1000000
+    let index=1000002
+
+    //console.log(checkFloat("1 Año"))
 
     await Promise.all(items.map(async (item) => {
         index++;
@@ -37,5 +39,6 @@ const main = async()=>{
         console.log(item.ItemNumber,  contents)
       }));
 }
+
 
 main()

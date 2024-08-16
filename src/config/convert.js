@@ -18,6 +18,7 @@ const convert = (row, tags)=>{
         
         if (mapRow[3]){
             if (mapRow[3]!=""){
+                //console.log(mapRow[3], valueAttrib,mapRow[4])
                 valueAttrib = valueAttrib.split(mapRow[3])[mapRow[4]]
             }
 
@@ -25,6 +26,7 @@ const convert = (row, tags)=>{
         //UOM
         if (mapRow[5]){
             if (mapRow[5]="1"){
+                console.log(valueAttrib, mapRow[2])
                 valueAttribUOM=valueAttrib.split(" ")[1] 
                 vattribNameUOM=vattribName+ "UEUOM"
 
@@ -50,6 +52,17 @@ const getValueByTag = (row, tags, tag)=>{
 
 const addValue = (groupName, attribName, attribValue, item)=>{
 
+    //const vattribValue =attribValue
+    let valFinal;
+    //const valNumber = parseFloat(attribValue)
+    if (isFloat(attribValue)){
+        valFinal= parseFloat(attribValue)
+    }else{
+        valFinal=attribValue
+    }
+
+    //console.log(valNumber, attribValue, valFinal)
+
     let attrGroup = item.ItemEffCategory.find(t => Object.keys(t)[0] === groupName)
     if(!attrGroup){
         const attribGroup={}
@@ -60,6 +73,13 @@ const addValue = (groupName, attribName, attribValue, item)=>{
     if (attrGroup[groupName].length==0){
         attrGroup[groupName].push({})
     }
-    attrGroup[groupName][0][attribName]=attribValue
+    attrGroup[groupName][0][attribName]=valFinal
 }
- module.exports={convert}
+
+function isFloat(n) {
+    if( n.match(/^-?\d*(\.\d+)?$/) && !isNaN(parseFloat(n))  )
+       return true;
+    return false;
+ }
+
+module.exports={convert}
