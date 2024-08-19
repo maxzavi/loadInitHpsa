@@ -8,6 +8,7 @@ const convert = (row, tags)=>{
     item.ItemCategory[0].ItemCatalog="HPSA"
     item.ItemCategory[0].CategoryCode="HPSA_LIN_"+getValueByTag(row,tags,"Línea Promart").substring(0,5)
     sku =getValueByTag(row,tags,"Sku")
+    item.ItemNumber=getValueByTag(row,tags,"Item Number")
     
     map.forEach(mapRow=>{
         let valueAttrib= getValueByTag(row,tags,mapRow[2])
@@ -29,6 +30,7 @@ const convert = (row, tags)=>{
                     vattribNameUOM=vattribName+ "UEUOM"    
                     valueAttrib=valueAttrib.split(" ")[0] 
                     vattribName="u"+vattribName+ "UE"
+                    if(valueAttrib==="0") valueAttrib=""
                 }
             }
             if (valueAttrib){
@@ -40,10 +42,29 @@ const convert = (row, tags)=>{
         }
     })
 
-    //add    ["pesoDelMasterpackLogistica","HpsaAtributosLogisticos","Peso Del Masterpack (Logística)","","","1"],
     addValue("HpsaAtributosLogisticos","pesoDelMasterpackLogisticaUEUOM", "kg", item)
-
+    //Default attrib HpsaAtributosDeSurtido clusterDeSurtido
+    addDefaultAttrib("HpsaAtributosDeSurtido","clusterDeSurtido","Sin Cluster", item)
+    /*
+    let attrGroup = item.ItemEffCategory.find(t => Object.keys(t)[0] === "HpsaAtributosDeSurtido")
+    if (attrGroup){
+        const aaa = attrGroup["HpsaAtributosDeSurtido"].find(t => Object.keys(t)[0] === "clusterDeSurtido")
+        if(!aaa)
+            attrGroup["HpsaAtributosDeSurtido"][0].clusterDeSurtido="Sin Cluster"    
+        
+    }*/
     return {item:item, sku:sku}
+}
+//Attrib by default in Attr Group
+
+const addDefaultAttrib = (groupName, attribName, attribValue, item)=>{
+    let attrGroup = item.ItemEffCategory.find(t => Object.keys(t)[0] === groupName)
+    if (attrGroup){
+        const aaa = attrGroup[groupName].find(t => Object.keys(t)[0] === attribName)
+        if(!aaa)
+            attrGroup[groupName][0][attribName]=attribValue   
+        
+    }
 }
 
 const getValueByTag = (row, tags, tag)=>{
@@ -53,16 +74,13 @@ const getValueByTag = (row, tags, tag)=>{
 
 const addValue = (groupName, attribName, attribValue, item)=>{
 
-    //const vattribValue =attribValue
     let valFinal;
-    //const valNumber = parseFloat(attribValue)
     if (isFloat(attribValue)){
         valFinal= parseFloat(attribValue)
+        //console.log(Math.round (valFinal*100)/100)
     }else{
         valFinal=attribValue
     }
-
-    //console.log(valNumber, attribValue, valFinal)
 
     let attrGroup = item.ItemEffCategory.find(t => Object.keys(t)[0] === groupName)
     if(!attrGroup){
