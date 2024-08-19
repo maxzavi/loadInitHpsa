@@ -12,6 +12,9 @@ const main = async()=>{
     const fileSkuErr=process.env.FILE_LOGS+ "LogSkuErr.txt"
     fs.writeFile(fileSkuOk, "", err=>{})
     fs.writeFile(fileSkuErr, "", err=>{})
+    //Initial value
+    let index=process.env.SEQ_INIT
+
     for (let x = 0; x < itemsInput.length; x++) {
         const element = itemsInput[x];
         await Promise.all(element.map(async ({item, sku}) => {

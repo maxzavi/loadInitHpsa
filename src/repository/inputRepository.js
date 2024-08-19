@@ -25,8 +25,6 @@ const getItemsInput = async ()=>{
     })
 
     console.log('Son: ' + items.length)
-    //Initial value
-    let index=process.env.SEQ_INIT
 
     const chunkedArray = [];
     let chunk = [];

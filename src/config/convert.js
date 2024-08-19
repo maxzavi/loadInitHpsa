@@ -17,13 +17,13 @@ const convert = (row, tags)=>{
 
             let valueAttribUOM= null
             let vattribNameUOM= null
-            
+            //split by mapRow[3]
             if (mapRow[3]){
                 if (mapRow[3]!=""){
                     valueAttrib = valueAttrib.split(mapRow[3])[mapRow[4]]
                 }    
             }
-            //UOM
+            //UOM mapRow[5]
             if (mapRow[5]){
                 if (mapRow[5]="1"){
                     valueAttribUOM=valueAttrib.split(" ")[1] 
@@ -33,12 +33,26 @@ const convert = (row, tags)=>{
                     if(valueAttrib==="0") valueAttrib=""
                 }
             }
+
             if (valueAttrib){
-                addValue(mapRow[1],vattribName, valueAttrib, item)
+                //Multislect mapRow[6]
+                if (mapRow[6]){
+                    const multivalues = valueAttrib.split(";")
+                    addValue(mapRow[1],vattribName, multivalues[0], item)
+
+                    for (let indexMv = 1; indexMv < multivalues.length; indexMv++) {
+                        const element = multivalues[indexMv];
+                        addDefaultAttribMultiselect(mapRow[1],vattribName, element, item,indexMv)
+                    }
+
+                }else{
+                    addValue(mapRow[1],vattribName, valueAttrib, item)
+                }
             }
             if (valueAttribUOM){
                 addValue(mapRow[1],vattribNameUOM, valueAttribUOM, item)
-            }    
+            }
+
         }
     })
 
@@ -55,15 +69,13 @@ const convert = (row, tags)=>{
     }*/
     return {item:item, sku:sku}
 }
-//Attrib by default in Attr Group
 
+//Attrib by default in Attr Group
 const addDefaultAttrib = (groupName, attribName, attribValue, item)=>{
     let attrGroup = item.ItemEffCategory.find(t => Object.keys(t)[0] === groupName)
     if (attrGroup){
-        const aaa = attrGroup[groupName].find(t => Object.keys(t)[0] === attribName)
-        if(!aaa)
-            attrGroup[groupName][0][attribName]=attribValue   
-        
+        const attribExists = attrGroup[groupName].find(t => Object.keys(t)[0] === attribName)
+        if(!attribExists) attrGroup[groupName][0][attribName]=attribValue
     }
 }
 
@@ -77,7 +89,6 @@ const addValue = (groupName, attribName, attribValue, item)=>{
     let valFinal;
     if (isFloat(attribValue)){
         valFinal= parseFloat(attribValue)
-        //console.log(Math.round (valFinal*100)/100)
     }else{
         valFinal=attribValue
     }
@@ -101,4 +112,12 @@ function isFloat(n) {
     return false;
  }
 
+//Attrib MultiSelect in Attr Group
+const addDefaultAttribMultiselect = (groupName, attribName, attribValue, item, index)=>{
+    let attrGroup = item.ItemEffCategory.find(t => Object.keys(t)[0] === groupName)
+    if (attrGroup){
+        attrGroup[groupName].push({})
+        attrGroup[groupName][index][attribName]=attribValue
+    }
+}
 module.exports={convert}
