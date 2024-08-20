@@ -8,8 +8,8 @@ const convert = (row, tags)=>{
     item.ItemCategory[0].ItemCatalog="HPSA"
     item.ItemCategory[0].CategoryCode="HPSA_LIN_"+getValueByTag(row,tags,"Línea Promart").substring(0,5)
     sku =getValueByTag(row,tags,"Sku")
-    item.ItemNumber=getValueByTag(row,tags,"Item Number")
-    
+    item.ItemNumber=getValueByTag(row,tags,"Item Number")    
+
     map.forEach(mapRow=>{
         let valueAttrib= getValueByTag(row,tags,mapRow[2])
         if (valueAttrib){

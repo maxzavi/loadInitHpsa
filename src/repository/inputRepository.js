@@ -5,7 +5,8 @@ const getItemsInput = async ()=>{
     const filepath= process.env.FILE_PATH
     const data = fs.readFileSync(filepath,'utf8')
     const rows = data.split('\n')
-    const tags = rows[0].split(';')
+
+    const tags = rows[0].replace("\r","").split(';')
 
     const csv=require('csvtojson')
 
@@ -16,6 +17,7 @@ const getItemsInput = async ()=>{
     })
     .fromString(data)
     .then((csvRow)=>{
+
         const items =[] 
         for (let index = 0; index < csvRow.length; index++) {
             const {item,sku} =  convert  (csvRow[index],tags)
@@ -30,7 +32,7 @@ const getItemsInput = async ()=>{
     let chunk = [];
     for (let i = 0; i < items.length; i++) {
       chunk.push(items[i]);
-      if ((i + 1) % 100 === 0) {
+      if ((i + 1) % 40 === 0) {
         chunkedArray.push(chunk);
         chunk = [];
       }
