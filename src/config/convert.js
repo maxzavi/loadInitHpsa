@@ -57,8 +57,13 @@ const convert = (row, tags)=>{
     })
 
     addValue("HpsaAtributosLogisticos","pesoDelMasterpackLogisticaUEUOM", "kg", item)
+    addValue("HpsaAtributosLogisticos","volumenDelProductoUEUOM", "cm3", item)
+    addValue("HpsaAtributosLogisticos","volumenUlTextUEUOM", "cm3", item)
     //Default attrib HpsaAtributosDeSurtido clusterDeSurtido
     addDefaultAttrib("HpsaAtributosDeSurtido","clusterDeSurtido","Sin Cluster", item)
+
+    addValue("HpsaAtributosLogisticos","volumenDeLaUnidadLogisticaUEUOM", "cm3", item)
+    addValue("HpsaAtributosLogisticos","volumenDelMasterpackLogisticaUEUOM", "cm3", item)
     /*
     let attrGroup = item.ItemEffCategory.find(t => Object.keys(t)[0] === "HpsaAtributosDeSurtido")
     if (attrGroup){
