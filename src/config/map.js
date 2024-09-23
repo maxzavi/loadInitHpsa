@@ -873,7 +873,8 @@ const map =[
 ["tipoDeResortes","HpsaAtributosContenido9","Tipo de resortes","","","",""],
 ["tipoDeRosca","HpsaAtributosContenido9","Tipo de rosca","","","",""],
 ["cargadoEnWeb","HpsaAtributosDeSeguimiento","Cargado en Web","","","",""],
-["coleccionGlovo","HpsaAtributosDeSeguimiento","COLECCION_GLOVO","","","",""],
+
+["coleccionGlovo","HpsaAtributosDeSeguimiento","Colección Glovo","","","",""],
 ["consultaDeStockAte","HpsaAtributosDeSeguimiento","CONSULTA_DE_STOCK_ATE","","","",""],
 
 ["crossSellingComplemento","HpsaAtributosDeSeguimiento","Cross Selling Complemento","","","",""],
