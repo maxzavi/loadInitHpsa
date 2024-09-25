@@ -918,10 +918,12 @@ const map =[
 ["ultimoUsuarioEnModificarTxt","HpsaAtributosDeSeguimiento","ULTIMO_USUARIO_EN_MODIFICAR_TX","","","",""],
 ["urlDetalle","HpsaAtributosDeSeguimiento","URL_DETALLE","","","",""],
 ["urlImagenLt","HpsaAtributosDeSeguimiento","URL_IMAGEN_LT","","","",""],
-["validacionDeMedidasDeProducto","HpsaAtributosDeSeguimiento","VALIDACION_DE_MEDIDAS_DE_PRODU","","","",""],
-["validacionDeMedidasDeUndLog","HpsaAtributosDeSeguimiento","VALIDACION_DE_MEDIDAS_DE_UND_L","","","",""],
-["validacionDePesosDeProducto","HpsaAtributosDeSeguimiento","VALIDACION_DE_PESOS_DE_PRODUCT","","","",""],
-["validacionDePesosDeUndLog","HpsaAtributosDeSeguimiento","VALIDACION_DE_PESOS_DE_UND_LOG","","","",""],
+
+["validacionDeMedidasDeProducto","HpsaAtributosDeSeguimiento","Validacion de medidas de Producto","","","",""],
+["validacionDeMedidasDeUndLog","HpsaAtributosDeSeguimiento","Validacion de medidas de Und Log","","","",""],
+["validacionDePesosDeProducto","HpsaAtributosDeSeguimiento","Validacion de pesos de Producto","","","",""],
+["validacionDePesosDeUndLog","HpsaAtributosDeSeguimiento","Validacion de Pesos de Und Log","","","",""],
+
 ["dificultadDelServicio","HpsaAtributosDeServicios","Dificultad del servicio","","","",""],
 ["servicioECommerce","HpsaAtributosDeServicios","Servicio E-commerce","","","",""],
 ["servicioGratuito","HpsaAtributosDeServicios","Servicio Gratuito","","","",""],
