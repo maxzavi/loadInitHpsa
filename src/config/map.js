@@ -1,3 +1,11 @@
+/*
+Attrib dup:
+medidaDeProductosEnCombo	2
+numeroDePiezas	2
+advertenciaDeUso	2
+diametroMaximoDePerforacionEnM	2
+*/
+
 const map = [
     //lin JSON
     ["codigoNnuuSunat", "HpsaAprobacionFinal", "Código NNUU-SUNAT", "-", "0", "", ""],
@@ -11,7 +19,10 @@ const map = [
     ["marca", "HpsaAprobacionFinal", "Marca PIM", "", "", "", ""],
     ["nombreGlovo", "HpsaAprobacionFinal", "Nombre Glovo", "", "", "", ""],
     ["realizadoComercial", "HpsaAtributosAsistente", "REALIZADO_COMERCIAL", "", "", "", ""],
+//
     ["advertenciaDeUso", "HpsaAtributosComerciales", "Advertencia de uso", "", "", "", ""],
+    //["advertenciaDeUso", "HpsaAtributosContenido1", "Advertencia de uso", "", "", "", ""],
+//
     ["area", "HpsaAtributosComerciales", "Área", "", "", "", ""],
     ["areaText", "HpsaAtributosComerciales", "Área text", "", "", "", ""],
     ["areaVtex", "HpsaAtributosComerciales", "Area_vtex", "", "", "", ""],
@@ -41,7 +52,10 @@ const map = [
     ["moneda", "HpsaAtributosComerciales", "Moneda", "", "", "", ""],
     ["mundoInfaltable", "HpsaAtributosComerciales", "Mundo Infaltable", "", "", "", ""],
     ["negociacion", "HpsaAtributosComerciales", "Negociación", "", "", "", ""],
+//
     ["numeroDePiezas", "HpsaAtributosComerciales", "Número de piezas", "", "", "", ""],
+    //["numeroDePiezas", "HpsaAtributosContenido10", "Número de piezas", "", "", "", ""],
+//
     ["observaciones", "HpsaAtributosComerciales", "Observaciones", "", "", "", ""],
     ["oc", "HpsaAtributosComerciales", "OC", "", "", "", ""],
     ["paisDeManufactura", "HpsaAtributosComerciales", "País De Manufactura", "", "", "", ""],
@@ -79,7 +93,6 @@ const map = [
     ["afectoDetraccion", "HpsaAtributosContables", "Afecto Detracción", "", "", "", ""],
     ["afectoIgv", "HpsaAtributosContables", "Afecto IGV", "", "", "", ""],
     ["afectoPercep", "HpsaAtributosContables", "Afecto Percep", "", "", "", ""],
-    ["advertenciaDeUso", "HpsaAtributosContenido1", "Advertencia de uso", "", "", "", ""],
     ["alturaDeZocalo", "HpsaAtributosContenido1", "Altura de zócalo", "", "", "", ""],
     ["alturaMaximaProducto", "HpsaAtributosContenido1", "Altura máxima producto", "", "", "", ""],
     ["alturaMinimaReposabrazos", "HpsaAtributosContenido1", "Altura mínima reposabrazos", "", "", "", ""],
@@ -103,7 +116,10 @@ const map = [
     ["lentes3d", "HpsaAtributosContenido1", "Lentes 3D", "", "", "", ""],
     ["materialDeAislante", "HpsaAtributosContenido1", "Material de aislante", "", "", "", ""],
     ["materiales", "HpsaAtributosContenido1", "Materiales", "", "", "", ""],
-    ["medidaDeProductosEnCombo", "HpsaAtributosContenido1", "Medida de productos en combo", "", "", "", ""],
+    //
+    ["medidaDeProductosEnCombo", "HpsaAtributosLogisticos", "Medida de productos en combo", "", "", "", ""],
+    //["medidaDeProductosEnCombo", "HpsaAtributosContenido1", "Medida de productos en combo", "", "", "", ""],
+    //
     ["medidasDeCajones", "HpsaAtributosContenido1", "Medidas de cajones", "", "", "", ""],
     ["memoriaExpandible", "HpsaAtributosContenido1", "Memoria expandible", "", "", "", ""],
     ["metodoDeAplicacion", "HpsaAtributosContenido1", "Método de aplicación", "", "", "", ""],
@@ -150,7 +166,6 @@ const map = [
     ["materialDelTablero", "HpsaAtributosContenido10", "Material del tablero", "", "", "", ""],
     ["materialDeBroche", "HpsaAtributosContenido10", "Material  De Broche", "", "", "", ""],
     ["moldeable", "HpsaAtributosContenido10", "Moldeable", "", "", "", ""],
-    ["numeroDePiezas", "HpsaAtributosContenido10", "Número de piezas", "", "", "", ""],
     ["numeroDeSillas", "HpsaAtributosContenido10", "Número de Sillas", "", "", "", ""],
     ["plazas", "HpsaAtributosContenido10", "Plazas", "", "", "", ""],
     ["porcentajeDeGerminacion", "HpsaAtributosContenido10", "Porcentaje de germinación", "", "", "", ""],
@@ -433,7 +448,6 @@ const map = [
     ["diametroDeSuccion", "HpsaAtributosContenido17", "Diámetro de succión", "", "", "", ""],
     ["diametroDelDisco", "HpsaAtributosContenido17", "Diámetro del disco", "", "", "", ""],
     ["diametroExterno", "HpsaAtributosContenido17", "Diámetro externo", "", "", "", ""],
-    ["diametroMaximoDePerforacionEnM", "HpsaAtributosContenido17", "Diámetro máximo de perforación en madera", "", "", "", ""],
     ["dosificacion", "HpsaAtributosContenido17", "Dosificación", "", "", "", ""],
     ["edad", "HpsaAtributosContenido17", "Edad", "", "", "", ""],
     ["equivalenciaLuminosa", "HpsaAtributosContenido17", "Equivalencia luminosa", "", "", "", ""],
@@ -476,7 +490,10 @@ const map = [
     ["cilindrada", "HpsaAtributosContenido18", "Cilindrada", "", "", "", ""],
     ["diametroDeDescarga", "HpsaAtributosContenido18", "Diámetro de descarga", "", "", "", ""],
     ["diametroDePivote", "HpsaAtributosContenido18", "Diámetro de pivote", "", "", "", ""],
-    ["diametroMaximoDePerforacionEnM", "HpsaAtributosContenido18", "Diámetro máximo de perforación en mampostería", "", "", "", ""],
+//
+    //["diametroMaximoDePerforacionEnM", "HpsaAtributosContenido18", "Diámetro máximo de perforación en mampostería", "", "", "", ""],
+    //["diametroMaximoDePerforacionEnM", "HpsaAtributosContenido17", "Diámetro máximo de perforación en madera", "", "", "", ""],
+//
     ["diametroParaDesague", "HpsaAtributosContenido18", "Diámetro para desagüe", "", "", "", ""],
     ["distanciaDeInstalacion", "HpsaAtributosContenido18", "Distancia de instalación", "", "", "", ""],
     ["espesorDePuertas", "HpsaAtributosContenido18", "Espesor de puertas", "", "", "", ""],
@@ -881,7 +898,6 @@ const map = [
     ["estadoDeFichaTecnica", "HpsaAtributosDeSeguimiento", "Estado de Ficha tecnica", "", "", "", ""],
     ["estadoFichaTecnicaProv", "HpsaAtributosDeSeguimiento", "Estado Ficha Técnica Prov", "", "", "", ""],
     ["estadoFoto", "HpsaAtributosDeSeguimiento", "ESTADO_FOTO", "", "", "", ""],
-    ["estadoFotoTxt", "HpsaAtributosDeSeguimiento", "ESTADO_FOTO_TXT", "", "", "", ""],
     ["estadoManualInstalacion", "HpsaAtributosDeSeguimiento", "Estado Manual Instalacion", "", "", "", ""],
     ["estadoManualUsuario", "HpsaAtributosDeSeguimiento", "Estado Manual Usuario", "", "", "", ""],
     ["estadoParaCargarEnWeb", "HpsaAtributosDeSeguimiento", "Estado para Cargar en Web", "", "", "", ""],
@@ -913,8 +929,8 @@ const map = [
     ["ultimaModificacion", "HpsaAtributosDeSeguimiento", "Última Modificación", "", "", "", ""],
     //["ultimaModificacionTxt","HpsaAtributosDeSeguimiento","ULTIMA_MODIFICACION_TXT","","","",""],
     ["ultimaModificacionTxt", "HpsaAtributosDeSeguimiento", "Última Modificación txt", "", "", "", ""],
-    //["ultimoUsuarioEnModificar","HpsaAtributosDeSeguimiento","Últim Usuario en Modificar","","","",""],
-    ["ultimoUsuarioEnModificar", "HpsaAtributosDeSeguimiento", "ULTIMO_USUARIO_EN_MODIFICAR", "", "", "", ""],
+    //["ultimoUsuarioEnModificar", "HpsaAtributosDeSeguimiento", "ULTIMO_USUARIO_EN_MODIFICAR", "", "", "", ""],
+    ["ultimoUsuarioEnModificar","HpsaAtributosDeSeguimiento","Últim Usuario en Modificar","","","",""],
     //["ultimoUsuarioEnModificarTxt","HpsaAtributosDeSeguimiento","ULTIMO_USUARIO_EN_MODIFICAR_TX","","","",""],
     ["ultimoUsuarioEnModificarTxt", "HpsaAtributosDeSeguimiento", "Últim Usuario en Modificar TXT", "", "", "", ""],
 
@@ -923,15 +939,23 @@ const map = [
     ["fechaDeCargaParaBl", "HpsaAtributosDeSeguimiento", "Fecha de carga  para  B&L", "", "", "", ""],
     ["fechaDeCargaWeb", "HpsaAtributosDeSeguimiento", "FECHA_DE_CARGA_WEB", "", "", "", ""],
     ["fechaDeEntregaBl", "HpsaAtributosDeSeguimiento", "Fecha de entrega B&L", "", "", "", ""],
-    ["fechaDeEnvioCrossWebservice", "HpsaAtributosDeSeguimiento", "FECHA_DE_ENVIO_CROSS_WEBSERVIC", "", "", "", ""],
     ["fichaTecnicaImpresaVisual", "HpsaAtributosDeSeguimiento", "FICHA_TECNICA_IMPRESA_VISUAL", "", "", "", ""],
     ["fotoCompleta", "HpsaAtributosDeSeguimiento", "Foto Completa", "", "", "", ""],
     ["nombreDeArchivo", "HpsaAtributosDeSeguimiento", "Nombre de acrhivo", "", "", "", ""],
     ["nombreDeJefeDeLinea", "HpsaAtributosDeSeguimiento", "Nombre de Jefe de linea", "", "", "", ""],
     ["observacionDeFoto", "HpsaAtributosDeSeguimiento", "OBSERVACION_DE_FOTO", "", "", "", ""],
     ["observacionOFechaEstimadaDeLle", "HpsaAtributosDeSeguimiento", "OBSERVACION_O_FECHA_ESTIMADA_D", "", "", "", ""],
-    ["seleccionGlovo", "HpsaAtributosDeSeguimiento", "SELECCION_GLOVO", "", "", "", ""],
-    ["supercoleccionGlovo", "HpsaAtributosDeSeguimiento", "SUPERCOLECCION_GLOVO", "", "", "", ""],
+
+    //["seleccionGlovo", "HpsaAtributosDeSeguimiento", "SELECCION_GLOVO", "", "", "", ""],
+    ["seleccionGlovo", "HpsaAtributosDeSeguimiento", "Selección Glovo", "", "", "", ""],
+    //["supercoleccionGlovo", "HpsaAtributosDeSeguimiento", "SUPERCOLECCION_GLOVO", "", "", "", ""],
+    ["supercoleccionGlovo", "HpsaAtributosDeSeguimiento", "Supercolección Glovo", "", "", "", ""],
+    //["fechaDeEnvioCrossWebservice", "HpsaAtributosDeSeguimiento", "FECHA_DE_ENVIO_CROSS_WEBSERVIC", "", "", "", ""],
+    ["fechaDeEnvioCrossWebservice", "HpsaAtributosDeSeguimiento", "Fecha de envío Cross Webservice", "", "", "", ""],
+    //["estadoFotoTxt", "HpsaAtributosDeSeguimiento", "ESTADO_FOTO_TXT", "", "", "", ""],
+    ["estadoFotoTxt", "HpsaAtributosDeSeguimiento", "Estado_Foto_TXT", "", "", "", ""],
+
+    
     ["urlDetalle", "HpsaAtributosDeSeguimiento", "URL_DETALLE", "", "", "", ""],
     ["validacionDeMedidasDeProducto", "HpsaAtributosDeSeguimiento", "Validacion de medidas de Producto", "", "", "", ""],
     ["validacionDeMedidasDeUndLog", "HpsaAtributosDeSeguimiento", "Validacion de medidas de Und Log", "", "", "", ""],
@@ -960,7 +984,6 @@ const map = [
     ["ean", "HpsaAtributosLogisticos", "Ean", "", "", "", ""],
     ["empiochado", "HpsaAtributosLogisticos", "Empiochado", "", "", "", ""],
     ["logistica", "HpsaAtributosLogisticos", "Logística", "", "", "", ""],
-    ["medidaDeProductosEnCombo", "HpsaAtributosLogisticos", "Medida de productos en combo", "", "", "", ""],
     ["medidas", "HpsaAtributosLogisticos", "Medidas", "", "", "", ""],
     ["paisDeProcedencia", "HpsaAtributosLogisticos", "País De Procedencia", "", "", "", ""],
     ["perecible", "HpsaAtributosLogisticos", "Perecible", "", "", "", ""],
