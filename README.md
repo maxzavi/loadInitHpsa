@@ -1,3 +1,25 @@
+# Marca y Proveesdor
+Se debe crear hojas con el catálogo de Marcas y Proveedores de PIM
+
+Se debe concatenar el id con las descrip y colocar en campos como **Marca PIM** y **Proveedor PIM**
+
+![alt text](image.png)
+
+
+![alt text](image-1.png)
+
+Formulas:
+
+- Marca:
+
+=SI(ESPACIOS(BS2)="";"";BUSCARV(BS2;MARCAS!$A:$C;2;0))
+
+- Proveedor:
+
+=CC2 & " \ "&BUSCARV(CC2;'proveedores step'!A:B;2;FALSO)
+
+
+
 # Validaciones necesarias
 
 - Fechas en formato 2025/02/01 a 2025-02-01 en Fecha de Inicio
