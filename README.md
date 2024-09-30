@@ -32,3 +32,13 @@ Para procesar los errados:
 - Cargar el resultado de LogSkuErr en una hoja llamada Err, agregar una columna **Item NumberErr** en la hoja de la data, y en esta columna hacer buscarv de sku en esta nueva hoja
 - Crear la columna Item Number en la hoja de data, y es es columa carga con la función SI, si existe **Item NumberOK**, colocar este dato, en caso contrario buscar **Item NumberERR**
 
+
+
+Configuración:
+
+```properties
+#MAC utf8, windows latin1
+ENCODE=utf8
+#MAC ; windows ,
+DELIMITER=;
+```
