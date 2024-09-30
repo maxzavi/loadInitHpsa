@@ -8,6 +8,9 @@ diametroMaximoDePerforacionEnM	2
 
 const map = [
     //lin JSON
+    //urlFtp
+    ["urlFtp", "HpsaAtributosVtex", "URL-FTP", "", "", "", ""],
+
     ["codigoNnuuSunat", "HpsaAprobacionFinal", "Código NNUU-SUNAT", "-", "0", "", ""],
     ["crossComplementEnWeb", "HpsaAprobacionFinal", "CROSS_COMPLEMENT_EN_WEB", "", "", "", ""],
     ["descripcionCarteleria", "HpsaAprobacionFinal", "Descripcion Carteleria", "", "", "", ""],
