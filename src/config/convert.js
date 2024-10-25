@@ -35,6 +35,11 @@ const convert = (row, tags)=>{
             }
 
             if (valueAttrib){
+                //Replace this/with mapRow[9]/mapRow[10]
+                if(mapRow[9] && mapRow[10]){
+                    valueAttrib = valueAttrib.replaceAll(mapRow[9] , mapRow[10])
+                    //console.log("replacing ..." , xxx)
+                }
                 //Multislect mapRow[6]
                 if (mapRow[6]){
                     const multivalues = valueAttrib.split(";")

@@ -5,6 +5,18 @@ numeroDePiezas	2
 advertenciaDeUso	2
 diametroMaximoDePerforacionEnM	2
 */
+//[0] Attrib PIM
+//[1] Attrib Type
+//[2] Field excel
+//[3] Split by
+//[4] Id field in split
+//[5] Value 1 is UOM
+//[6] Value 1 is MultiRow
+//[7] Value 1 is YES/NOT
+//[8] Value 1 allow blank
+//[9] Replace this
+//[10] Replace with
+
 
 const map = [
     //lin JSON
@@ -83,7 +95,7 @@ const map = [
     ["estructuraDeEmpaque", "HpsaAtributosComerciales2", "Estructura de Empaque", "", "", "", ""],
 
     ["idYoutube", "HpsaAtributosComerciales2", "ID Youtube", "", "", "", ""],
-    ["ingresoEspecial", "HpsaAtributosComerciales2", "INGRESO_ESPECIAL", "", "", "", ""],
+    ["ingresoEspecial", "HpsaAtributosComerciales2", "Ingreso_Especial", "", "", "", ""],
     ["nivelSocioeconOmico", "HpsaAtributosComerciales2", "NIVEL SOCIOECONÓMICO", "", "", "", ""],
     ["nuevoTipoDeSurtido", "HpsaAtributosComerciales2", "Nuevo Tipo de surtido", "", "", "", ""],
     ["paisDeOrigen", "HpsaAtributosComerciales2", "País de origen", "", "", "", ""],
@@ -903,7 +915,7 @@ const map = [
     ["enriquecimientoPrimeraInstanci", "HpsaAtributosDeSeguimiento", "Enriquecimiento Primera Instancia", "", "", "", ""],
     ["estadoDeFichaTecnica", "HpsaAtributosDeSeguimiento", "Estado de Ficha tecnica", "", "", "", ""],
     ["estadoFichaTecnicaProv", "HpsaAtributosDeSeguimiento", "Estado Ficha Técnica Prov", "", "", "", ""],
-    ["estadoFoto", "HpsaAtributosDeSeguimiento", "ESTADO_FOTO", "", "", "", ""],
+    //["estadoFoto", "HpsaAtributosDeSeguimiento", "ESTADO_FOTO", "", "", "", ""],
     ["estadoManualInstalacion", "HpsaAtributosDeSeguimiento", "Estado Manual Instalacion", "", "", "", ""],
     ["estadoManualUsuario", "HpsaAtributosDeSeguimiento", "Estado Manual Usuario", "", "", "", ""],
     ["estadoParaCargarEnWeb", "HpsaAtributosDeSeguimiento", "Estado para Cargar en Web", "", "", "", ""],
@@ -977,7 +989,7 @@ const map = [
     ["tipoDeServicio", "HpsaAtributosDeServicios", "Tipo de Servicio", "", "", "", ""],
     ["clusterDeSurtido", "HpsaAtributosDeSurtido", "Cluster de surtido", "", "", "", ""],
     ["fechaDeFin", "HpsaAtributosDeSurtido", "Fecha de Salida", "", "", "", ""],
-    ["fechaDeInicio", "HpsaAtributosDeSurtido", "Fecha de Inicio", "", "", "", ""],
+    ["fechaDeInicio", "HpsaAtributosDeSurtido", "Fecha de Inicio", "", "", "", "","","","/","-"],
     ["longtail", "HpsaAtributosDeSurtido", "LONGTAIL", "", "", "", ""],
     ["alturaDeLaUnidadLogistica", "HpsaAtributosLogisticos", "Altura De La Unidad Logística", "", "", "1", ""],
     ["alturaDelMasterpackLogistica", "HpsaAtributosLogisticos", "Altura Del Masterpack (Logística)", "", "", "1", ""],

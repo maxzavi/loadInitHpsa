@@ -18,6 +18,7 @@ Formulas:
 
 =CC2 & " \ "&BUSCARV(CC2;'proveedores step'!A:B;2;FALSO)
 
+# QUITAR PRODUCTOS SIN SKU
 
 
 # Validaciones necesarias
