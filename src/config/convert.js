@@ -69,6 +69,8 @@ const convert = (row, tags)=>{
 
     addValue("HpsaAtributosLogisticos","volumenDeLaUnidadLogisticaUEUOM", "cm3", item)
     addValue("HpsaAtributosLogisticos","volumenDelMasterpackLogisticaUEUOM", "cm3", item)
+    addValue("HpsaAtributosLogisticos","diametroDelProductoUEUOM", "cm", item)
+
     /*
     let attrGroup = item.ItemEffCategory.find(t => Object.keys(t)[0] === "HpsaAtributosDeSurtido")
     if (attrGroup){
