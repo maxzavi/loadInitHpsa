@@ -987,7 +987,7 @@ const map = [
     ["servicioECommerce", "HpsaAtributosDeServicios", "Servicio E-commerce", "", "", "", ""],
     ["servicioGratuito", "HpsaAtributosDeServicios", "Servicio Gratuito", "", "", "", ""],
     ["tipoDeServicio", "HpsaAtributosDeServicios", "Tipo de Servicio", "", "", "", ""],
-    ["clusterDeSurtido", "HpsaAtributosDeSurtido", "Cluster de surtido", "", "", "", ""],
+    ["clusterDeSurtido", "HpsaAtributosDeSurtido", "Cluster de surtido", "", "", "", "1"],
     ["fechaDeFin", "HpsaAtributosDeSurtido", "Fecha de Salida", "", "", "", ""],
     ["fechaDeInicio", "HpsaAtributosDeSurtido", "Fecha de Inicio", "", "", "", "","","","/","-"],
     ["longtail", "HpsaAtributosDeSurtido", "LONGTAIL", "", "", "", ""],
