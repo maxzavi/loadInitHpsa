@@ -18,7 +18,10 @@ const savePim = async (itemPim) => {
             fs.appendFile(fileJsonErr, JSON.stringify(itemPim) + "\n", err=>{})
             console.log(JSON.stringify(itemPim))
             if(err.response){
-                return { status: err.response.status, message: err.response.data.replace("\n"," ").replace("\r"," ") }
+                //console.log(err.response.data)
+                if(err.response.data) return { status: err.response.status, message: err.response.data.replace("\n"," ").replace("\r"," ") }
+                else  return { status: err.response.status, message: err.response.data}
+
             }else{
                 console.log(err)
                 return { status: 500, message: "Unexpected error!!!" }
